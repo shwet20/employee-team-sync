@@ -257,7 +257,8 @@ const Attendance = () => {
                         Save Data
                       </button>}
                      {attendanceObj.attendanceId != 0 &&
-                      <button className="btn btn-success btn-sm" onClick={()=>updateAttendance()}>
+                      <button className="btn btn-success btn-sm" 
+                      onClick={()=>updateAttendance()}>
                         Update Data
                       </button>
                     }
