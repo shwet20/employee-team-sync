@@ -8,6 +8,7 @@ import SalaryAdvance from './components/SalaryAdvance';
 import SalaryVoucher from './components/SalaryVoucher';
 import Leaves from './components/Leaves';
 import Header from './components/Header';
+import Error from './components/Error';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path='/Salary-Advance' element={<SalaryAdvance />} ></Route>
         <Route path='/Salary-Voucher' element={<SalaryVoucher />} ></Route>
         <Route path='/Leaves' element={<Leaves />} ></Route>
+        <Route path='*' element={<Error></Error>} ></Route>
       </Routes>
 
     </BrowserRouter>

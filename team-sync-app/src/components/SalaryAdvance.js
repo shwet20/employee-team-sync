@@ -54,7 +54,7 @@ const SalaryAdvance = () => {
         try {
             const result = await axios.post(apiEndPoint + "AddAdvance", advanceObj);
             if (result.data.result) {
-                alert('attendance Created');
+                alert('Advance added');
                 getAllAdvance();
             } else {
                 alert(result.data.message)
@@ -181,7 +181,7 @@ const SalaryAdvance = () => {
               <div className="card-header bg-success">Salary Advance</div>
               <div className="card-body">
                 <div className="row">
-                  <div className="col-6">
+                  <div className="col-12">
                     <label>Employee Name</label>
                     <select
                       className="form-select"
@@ -224,17 +224,17 @@ const SalaryAdvance = () => {
                   </div>
                 </div>
                 <div className="row">
-                  <div className="col-6 mt-3 text-start">
+                  <div className="col-12 mt-3 text-start">
                   <label>
                       Reason
                     </label>
-                    <input
-                      type="text"
-                      checked={advanceObj.reason}
+                    <textarea
+                    className='form-control'
+                      value={advanceObj.reason}
                       onChange={(event) => {
                         changeFormValue(event, "reason");
                       }}
-                    ></input>
+                    ></textarea>
                    
                   </div>
                 </div>
